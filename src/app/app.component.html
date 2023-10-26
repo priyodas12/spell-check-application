@@ -1,0 +1,18 @@
+<div class="container mt-2 pt-3">
+  <div class="columns is-centered">
+    <div class="column box is-one-third">
+      <h1 class="title is-4 has-text-centered">Typing Challenge</h1>
+      <p class="has-text-centered mb-4" [style.color]='spellChkStyle' (click)="generateRandomText()">
+        <span [class]="compareText(letter,typedText[i])" *ngFor="let letter of randomText.split(''); let i=index">
+          {{letter}}
+        </span>
+      </p>
+      <div class="field mb-3">
+        <input class="input" type="text" name="type-text" id="ip-text" placeholder="Type here"
+          (keyup)="onTextInput($event)">
+      </div>
+      <h3 *ngIf="typedText===randomText" class="has-text-centered mb-4">Passed!</h3>
+      <h3 *ngIf="typedText!==randomText" class="has-text-centered mb-4">Failed!</h3>
+    </div>
+  </div>
+</div>

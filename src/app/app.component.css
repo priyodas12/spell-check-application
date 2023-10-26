@@ -1,0 +1,16 @@
+.box {
+  background-color: rgb(179, 235, 235);
+  box-shadow: 3px 4px #dad8d8;
+}
+
+.pending {
+  color: rgb(27, 27, 29);
+}
+
+.error {
+  color: rgb(255, 0, 0);
+}
+
+.success {
+  color: rgb(3, 97, 31);
+}
